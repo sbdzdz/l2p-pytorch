@@ -26,13 +26,13 @@ timm==0.6.7
 pillow==9.2.0
 matplotlib==3.5.3
 ```
-These packages can be installed easily by 
+These packages can be installed easily by
 ```
 pip install -r requirements.txt
 ```
 
 ## Data preparation
-If you already have CIFAR-100 or 5-Datasets (MNIST, Fashion-MNIST, NotMNIST, CIFAR10, SVHN), pass your dataset path to  `--data-path`.
+If you already have CIFAR-100 or 5-Datasets (MNIST, Fashion-MNIST, NotMNIST, CIFAR10, SVHN), pass your dataset path to  `--data_path`.
 
 
 The datasets aren't ready, change the download argument in `datasets.py` as follows
@@ -61,9 +61,9 @@ python -m torch.distributed.launch \
         --use_env main.py \
         <cifar100_l2p or five_datasets_l2p> \
         --model vit_base_patch16_224 \
-        --batch-size 16 \
-        --data-path /local_datasets/ \
-        --output_dir ./output 
+        --batch_size 16 \
+        --data_path /local_datasets/ \
+        --output_dir ./output
 ```
 
 Single node with multi gpus
@@ -73,9 +73,9 @@ python -m torch.distributed.launch \
         --use_env main.py \
         <cifar100_l2p or five_datasets_l2p> \
         --model vit_base_patch16_224 \
-        --batch-size 16 \
-        --data-path /local_datasets/ \
-        --output_dir ./output 
+        --batch_size 16 \
+        --data_path /local_datasets/ \
+        --output_dir ./output
 ```
 
 Also available in <a href="https://slurm.schedmd.com/documentation.html">Slurm</a> system by changing options on `train_cifar100_l2p.sh` or `train_five_datasets.sh` properly.

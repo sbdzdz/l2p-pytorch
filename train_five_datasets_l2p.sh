@@ -18,6 +18,6 @@ python -m torch.distributed.launch \
         --use_env main.py \
         five_datasets_l2p \
         --model vit_base_patch16_224 \
-        --batch-size 16 \
-        --data-path /local_datasets/ \
-        --output_dir ./output 
+        --batch_size 16 \
+        --data_path /local_datasets/ \
+        --output_dir ./output

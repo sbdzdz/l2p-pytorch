@@ -1,7 +1,8 @@
 import argparse
 
+
 def get_args_parser(subparsers):
-    subparsers.add_argument('--batch-size', default=16, type=int, help='Batch size per device')
+    subparsers.add_argument('--batch_size', default=16, type=int, help='Batch size per device')
     subparsers.add_argument('--epochs', default=5, type=int)
 
     # Model parameters
@@ -50,7 +51,7 @@ def get_args_parser(subparsers):
     subparsers.add_argument('--recount', type=int, default=1, help='Random erase count (default: 1)')
 
     # Data parameters
-    subparsers.add_argument('--data-path', default='/local_datasets/', type=str, help='dataset path')
+    subparsers.add_argument('--data_path', default='/local_datasets/', type=str, help='dataset path')
     subparsers.add_argument('--dataset', default='Split-CIFAR100', type=str, help='dataset name')
     subparsers.add_argument('--shuffle', default=False, help='shuffle the data order')
     subparsers.add_argument('--output_dir', default='./output', help='path where to save, empty for no saving')
@@ -97,4 +98,4 @@ def get_args_parser(subparsers):
     subparsers.add_argument('--freeze', default=['blocks', 'patch_embed', 'cls_token', 'norm', 'pos_embed'], nargs='*', type=list, help='freeze part in backbone model')
 
     # Misc parameters
-    subparsers.add_argument('--print_freq', type=int, default=10, help = 'The frequency of printing')
+    subparsers.add_argument('--print_freq', type=int, default=10, help = 'The frequency of printing')    subparsers.add_argument('--print_freq', type=int, default=10, help = 'The frequency of printing')
